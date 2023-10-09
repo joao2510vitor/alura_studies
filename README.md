@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Alura Studies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Para inicializar
 
-In the project directory, you can run:
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### `npm install --save-dev sass`
+Para instalar o packge do SASS. Este pacote é uma distribuição do Dart Sass, compilado para JavaScript puro sem código nativo ou dependências externas. Ele fornece um executável de linha de comando e uma API .js Node.sass
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install -D typescript-plugin-css-modules`
+Então, para conseguirmos criar uma classe única mesmo que o nome seja genérico para não termos o problema de sobreposição. Temos um pacote que o resolve, chamado CSS Modules.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ainda na parte de "Installation" mais adiante, pede-se que coloquemos este plugin no arquivo tsconfig.json, pois é onde está a configuração de TypeScript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Então copiaremos apenas a linha com o nome de "plugins": fornecido no site, sem copiar também o "compilerOptions":, pois já temos o em nosso arquivo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+~~~
+{
+    "compilerOptions": {
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    }
+}
+~~~
